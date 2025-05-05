@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with subtle gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9f9f9" />
+      <stop offset="100%" stop-color="#f0f0f0" />
+    </linearGradient>
+    
+    <!-- Central Hub Glow -->
+    <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#5B8DEF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#5B8DEF" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Signal Animation -->
+    <linearGradient id="signal-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0" />
+      <stop offset="50%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0" />
+    </linearGradient>
+    
+    <!-- Component Backgrounds -->
+    <linearGradient id="device-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5B8DEF" />
+      <stop offset="100%" stop-color="#4776CB" />
+    </linearGradient>
+    
+    <linearGradient id="brain-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9C27B0" />
+      <stop offset="100%" stop-color="#7B1FA2" />
+    </linearGradient>
+    
+    <linearGradient id="heart-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F44336" />
+      <stop offset="100%" stop-color="#D32F2F" />
+    </linearGradient>
+    
+    <linearGradient id="tens-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9800" />
+      <stop offset="100%" stop-color="#F57C00" />
+    </linearGradient>
+    
+    <linearGradient id="central-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#388E3C" />
+    </linearGradient>
+    
+    <!-- Signal Animations -->
+    <path id="sin-wave" d="M0,10 C2.5,0 7.5,0 10,10 C12.5,20 17.5,20 20,10 C22.5,0 27.5,0 30,10 C32.5,20 37.5,20 40,10 C42.5,0 47.5,0 50,10" />
+    
+    <!-- Connector Templates -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8D8D8D" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  <circle cx="400" cy="300" r="280" fill="url(#hub-glow)" />
+  
+  <!-- Central System - Central Element -->
+  <g transform="translate(350, 250)">
+    <circle cx="0" cy="0" r="80" fill="url(#central-gradient)" />
+    <circle cx="0" cy="0" r="70" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- Server/AI Icon in Center -->
+    <g transform="translate(-30, -30) scale(0.6)">
+      <rect x="0" y="0" width="100" height="75" rx="5" fill="#ffffff" />
+      <rect x="10" y="10" width="80" height="15" rx="2" fill="#388E3C" />
+      <rect x="10" y="30" width="80" height="5" rx="1" fill="#cccccc" />
+      <rect x="10" y="40" width="60" height="5" rx="1" fill="#cccccc" />
+      <rect x="10" y="50" width="80" height="5" rx="1" fill="#cccccc" />
+      <rect x="10" y="60" width="40" height="5" rx="1" fill="#cccccc" />
+      
+      <!-- CPU/Brain Lines -->
+      <line x1="85" y1="20" x2="95" y2="20" stroke="#388E3C" stroke-width="2" />
+      <line x1="90" y1="15" x2="90" y2="25" stroke="#388E3C" stroke-width="2" />
+      <line x1="80" y1="28" x2="95" y2="28" stroke="#388E3C" stroke-width="1" />
+      <line x1="85" y1="35" x2="95" y2="35" stroke="#388E3C" stroke-width="1" />
+    </g>
+    
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">중앙 제어 시스템</text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Central System</text>
+  </g>
+  
+  <!-- ECG Device - Top Left -->
+  <g transform="translate(150, 130)">
+    <circle cx="0" cy="0" r="60" fill="url(#heart-gradient)" />
+    <circle cx="0" cy="0" r="52" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- Heart Icon -->
+    <g transform="translate(-25, -25) scale(0.5)">
+      <path d="M50,30 C55,20 65,20 75,30 C85,40 85,50 75,65 C65,80 50,90 50,90 C50,90 35,80 25,65 C15,50 15,40 25,30 C35,20 45,20 50,30 Z" fill="#ffffff" />
+      
+      <!-- Heartbeat Line -->
+      <path d="M20,60 L35,60 L40,45 L45,75 L50,40 L55,75 L60,60 L80,60" fill="none" stroke="#ffffff" stroke-width="3" />
+    </g>
+    
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">ECG 모니터링</text>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">심전도 측정</text>
+  </g>
+  
+  <!-- EMG Device - Top Right -->
+  <g transform="translate(550, 130)">
+    <circle cx="0" cy="0" r="60" fill="url(#device-gradient)" />
+    <circle cx="0" cy="0" r="52" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- Muscle Icon -->
+    <g transform="translate(-25, -25) scale(0.5)">
+      <path d="M30,25 C40,20 60,20 70,25 C85,32 90,40 85,60 C82,75 75,80 60,85 C45,90 35,85 25,75 C15,65 15,50 20,40 C22,35 25,28 30,25 Z" fill="#ffffff" />
+      <path d="M35,35 L45,40 L55,40 L65,35 M35,45 L45,50 L55,50 L65,45 M35,55 L45,60 L55,60 L65,55 M35,65 L45,70 L55,70 L65,65" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    </g>
+    
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">EMG 모니터링</text>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">근전도 측정</text>
+  </g>
+  
+  <!-- EEG Device - Bottom Left -->
+  <g transform="translate(150, 430)">
+    <circle cx="0" cy="0" r="60" fill="url(#brain-gradient)" />
+    <circle cx="0" cy="0" r="52" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- Brain Icon -->
+    <g transform="translate(-25, -25) scale(0.5)">
+      <path d="M50,20 C80,20 90,35 90,50 C90,65 80,80 70,80 C65,90 55,95 45,90 C35,95 25,90 20,80 C10,75 10,65 10,50 C10,35 20,20 50,20 Z" fill="#ffffff" />
+      <path d="M30,35 C35,25 45,25 50,35 M50,35 C55,25 65,25 70,35 M20,50 C25,40 35,40 40,50 M60,50 C65,40 75,40 80,50 M25,65 C30,55 40,55 45,65 M55,65 C60,55 70,55 75,65" fill="none" stroke="#ffffff" stroke-width="2" />
+    </g>
+    
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">EEG 모니터링</text>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">뇌파 측정</text>
+  </g>
+  
+  <!-- TENS Device - Bottom Right -->
+  <g transform="translate(550, 430)">
+    <circle cx="0" cy="0" r="60" fill="url(#tens-gradient)" />
+    <circle cx="0" cy="0" r="52" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- Electrical Stimulation Icon -->
+    <g transform="translate(-25, -25) scale(0.5)">
+      <path d="M45,20 L55,20 L60,40 L75,40 L65,60 L70,60 L50,85 L55,60 L40,60 L45,40 L30,40 L45,20 Z" fill="#ffffff" />
+      
+      <!-- Waves -->
+      <path d="M20,35 C25,30 30,40 35,35 M65,35 C70,30 75,40 80,35 M15,70 C20,65 25,75 30,70 M70,70 C75,65 80,75 85,70" fill="none" stroke="#ffffff" stroke-width="2" />
+    </g>
+    
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">TENS 자극</text>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">전기 자극 치료</text>
+  </g>
+  
+  <!-- Transformers/AI - Middle Left -->
+  <g transform="translate(230, 290)">
+    <circle cx="0" cy="0" r="60" fill="url(#brain-gradient)" opacity="0.9" />
+    <circle cx="0" cy="0" r="52" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- AI/Transformer Icon -->
+    <g transform="translate(-25, -25) scale(0.5)">
+      <rect x="15" y="15" width="70" height="70" rx="10" fill="none" stroke="#ffffff" stroke-width="3" />
+      
+      <!-- Neural Network -->
+      <circle cx="25" cy="30" r="5" fill="#ffffff" />
+      <circle cx="25" cy="50" r="5" fill="#ffffff" />
+      <circle cx="25" cy="70" r="5" fill="#ffffff" />
+      
+      <circle cx="50" cy="30" r="5" fill="#ffffff" />
+      <circle cx="50" cy="50" r="5" fill="#ffffff" />
+      <circle cx="50" cy="70" r="5" fill="#ffffff" />
+      
+      <circle cx="75" cy="40" r="5" fill="#ffffff" />
+      <circle cx="75" cy="60" r="5" fill="#ffffff" />
+      
+      <!-- Connections -->
+      <line x1="25" y1="30" x2="50" y2="30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="25" y1="30" x2="50" y2="50" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="25" y1="50" x2="50" y2="30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="25" y1="50" x2="50" y2="50" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="25" y1="50" x2="50" y2="70" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="25" y1="70" x2="50" y2="50" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="25" y1="70" x2="50" y2="70" stroke="#ffffff" stroke-width="1.5" />
+      
+      <line x1="50" y1="30" x2="75" y2="40" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="50" y1="50" x2="75" y2="40" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="50" y1="50" x2="75" y2="60" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="50" y1="70" x2="75" y2="60" stroke="#ffffff" stroke-width="1.5" />
+    </g>
+    
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">트랜스포머 분석</text>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">이상 거동 감지</text>
+  </g>
+  
+  <!-- Personalization - Middle Right -->
+  <g transform="translate(470, 290)">
+    <circle cx="0" cy="0" r="60" fill="url(#device-gradient)" opacity="0.9" />
+    <circle cx="0" cy="0" r="52" fill="#ffffff" fill-opacity="0.2" />
+    
+    <!-- Personalization Icon -->
+    <g transform="translate(-25, -25) scale(0.5)">
+      <circle cx="50" cy="35" r="15" fill="#ffffff" />
+      <path d="M30,85 C30,65 40,55 50,55 C60,55 70,65 70,85 Z" fill="#ffffff" />
+      
+      <!-- Settings Gear -->
+      <g transform="translate(70, 20)">
+        <circle cx="0" cy="0" r="10" fill="none" stroke="#ffffff" stroke-width="2" />
+        <line x1="0" y1="-15" x2="0" y2="-10" stroke="#ffffff" stroke-width="2" />
+        <line x1="0" y1="10" x2="0" y2="15" stroke="#ffffff" stroke-width="2" />
+        <line x1="-15" y1="0" x2="-10" y2="0" stroke="#ffffff" stroke-width="2" />
+        <line x1="10" y1="0" x2="15" y2="0" stroke="#ffffff" stroke-width="2" />
+        <line x1="-10.6" y1="-10.6" x2="-7.1" y2="-7.1" stroke="#ffffff" stroke-width="2" />
+        <line x1="7.1" y1="7.1" x2="10.6" y2="10.6" stroke="#ffffff" stroke-width="2" />
+        <line x1="-10.6" y1="10.6" x2="-7.1" y2="7.1" stroke="#ffffff" stroke-width="2" />
+        <line x1="7.1" y1="-7.1" x2="10.6" y2="-10.6" stroke="#ffffff" stroke-width="2" />
+      </g>
+      
+      <!-- Graph -->
+      <g transform="translate(15, 70)">
+        <rect x="0" y="0" width="25" height="10" fill="#ffffff" />
+        <rect x="27" y="-5" width="25" height="15" fill="#ffffff" />
+      </g>
+    </g>
+    
+    <text x="0" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">개인화된 자극</text>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">맞춤형 치료</text>
+  </g>
+  
+  <!-- Connecting Lines -->
+  <!-- Central to Devices -->
+  <line x1="330" y1="250" x2="200" y2="150" stroke="#8D8D8D" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)" />
+  <line x1="370" y1="250" x2="500" y2="150" stroke="#8D8D8D" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)" />
+  <line x1="330" y1="270" x2="200" y2="400" stroke="#8D8D8D" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)" />
+  <line x1="370" y1="270" x2="500" y2="400" stroke="#8D8D8D" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)" />
+  
+  <!-- Central to Modules -->
+  <line x1="330" y1="260" x2="280" y2="280" stroke="#8D8D8D" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="370" y1="260" x2="420" y2="280" stroke="#8D8D8D" stroke-width="3" marker-end="url(#arrowhead)" />
+  
+  <!-- Animated Signal Paths -->
+  <!-- ECG to Central -->
+  <g transform="translate(170, 160) rotate(25)">
+    <path d="M0,0 C10,0 15,-10 20,-10 C25,-10 30,10 35,10 C40,10 45,-10 50,-10 C55,-10 60,10 65,10 C70,10 75,-10 80,-10 C85,-10 90,0 100,0" 
+          fill="none" stroke="url(#signal-gradient)" stroke-width="3">
+      <animate attributeName="stroke-dashoffset" from="100" to="0" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,20;10,15;15,10;20,5" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- EMG to Central -->
+  <g transform="translate(460, 160) rotate(155)">
+    <path d="M0,0 C5,5 10,10 15,0 C20,-10 25,10 30,0 C35,-10 40,10 45,0 C50,-10 55,10 60,0 C65,-10 70,10 75,0 C80,-10 85,10 90,0" 
+          fill="none" stroke="url(#signal-gradient)" stroke-width="3">
+      <animate attributeName="stroke-dashoffset" from="100" to="0" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,15;10,10;15,5" dur="1.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- EEG to Central -->
+  <g transform="translate(170, 400) rotate(-25)">
+    <path d="M0,0 C10,0 15,-10 20,0 C25,10 30,-10 35,0 C40,10 45,-10 50,0 C55,10 60,-10 65,0 C70,10 75,-10 80,0 C85,10 90,-10 100,0" 
+          fill="none" stroke="url(#signal-gradient)" stroke-width="3">
+      <animate attributeName="stroke-dashoffset" from="100" to="0" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="10,20;15,15;20,10" dur="3s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Central to TENS -->
+  <g transform="translate(460, 400) rotate(-155)">
+    <path d="M0,0 L10,0 L15,-5 L20,5 L25,-5 L30,5 L35,-5 L40,5 L45,-5 L50,5 L55,-5 L60,5 L65,-5 L70,5 L75,-5 L80,5 L85,-5 L90,0 L100,0" 
+          fill="none" stroke="#FF9800" stroke-width="3">
+      <animate attributeName="stroke-dashoffset" from="0" to="100" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,5;3,7;5,5" dur="1s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Title and Subtitle -->
+  <g transform="translate(400, 40)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333333">다중 모달 생체 자극 진단 및 치료 시스템</text>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="#666666">Multi-Modal Bio-Stimulation, Diagnosis and Treatment System</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(30, 520)">
+    <rect x="0" y="0" width="200" height="60" rx="5" fill="white" fill-opacity="0.7" />
+    
+    <circle cx="15" cy="15" r="8" fill="url(#heart-gradient)" />
+    <text x="30" y="20" font-family="Arial, sans-serif" font-size="12" fill="#333333">생체 신호 수집</text>
+    
+    <circle cx="15" cy="40" r="8" fill="url(#central-gradient)" />
+    <text x="30" y="45" font-family="Arial, sans-serif" font-size="12" fill="#333333">AI 기반 분석</text>
+    
+    <circle cx="115" cy="15" r="8" fill="url(#brain-gradient)" />
+    <text x="130" y="20" font-family="Arial, sans-serif" font-size="12" fill="#333333">트랜스포머 처리</text>
+    
+    <circle cx="115" cy="40" r="8" fill="url(#tens-gradient)" />
+    <text x="130" y="45" font-family="Arial, sans-serif" font-size="12" fill="#333333">맞춤형 자극</text>
+  </g>
+  
+  <!-- Footer - Copyright -->
+  <g transform="translate(680, 580)">
+    <text x="0" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666666">© 2025 유케어트론</text>
+  </g>
+</svg>
